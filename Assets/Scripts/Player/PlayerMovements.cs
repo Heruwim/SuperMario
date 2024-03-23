@@ -34,6 +34,8 @@ public class PlayerMovements : MonoBehaviour
         {
             GroundedMovement();
         }
+
+        ApplyGravity();
     }
 
     private void FixedUpdate()
@@ -56,6 +58,7 @@ public class PlayerMovements : MonoBehaviour
 
     private void GroundedMovement()
     {
+        _velocity.y = Mathf.Max(_velocity.y, 0f);
         Jumping = _velocity.y > 0;
 
         if (Input.GetButtonDown("Jump"))
@@ -63,5 +66,14 @@ public class PlayerMovements : MonoBehaviour
             _velocity.y = JumpForse;
             Jumping = true;
         }
+    }
+
+    private void ApplyGravity()
+    {
+        bool falling = _velocity.y < 0 || !Input.GetButton("Jump");
+        float multiplier = falling ? 2f : 1f;
+
+        _velocity.y += Gravity * multiplier * Time.deltaTime;
+        _velocity.y = Mathf.Max(_velocity.y, Gravity / 2);
     }
 }
