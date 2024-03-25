@@ -5,7 +5,7 @@ public class PlayerSpriteRenderer : MonoBehaviour
     [SerializeField] private Sprite _idle;
     [SerializeField] private Sprite _jump;
     [SerializeField] private Sprite _slide;
-    [SerializeField] private Sprite _run;
+    [SerializeField] private AnimatedSprites _run;
 
     private SpriteRenderer _spriteRenderer;
     private PlayerMovements _movements;
@@ -18,6 +18,8 @@ public class PlayerSpriteRenderer : MonoBehaviour
 
     private void LateUpdate()
     {
+        _run.enabled = _movements.Running;
+
         if (_movements.Jumping)
         {
             _spriteRenderer.sprite = _jump;
@@ -26,13 +28,19 @@ public class PlayerSpriteRenderer : MonoBehaviour
         {
             _spriteRenderer.sprite = _slide;
         }
-        else if (_movements.Running)
-        {
-            _spriteRenderer.sprite = _run;
-        }
-        else
+        else if(!_movements.Running)
         {
             _spriteRenderer.sprite = _idle;
         }
+    }
+
+    private void OnEnable()
+    {
+        _spriteRenderer.enabled = true;
+    }
+
+    private void OnDisable()
+    {
+        _spriteRenderer.enabled = false;
     }
 }

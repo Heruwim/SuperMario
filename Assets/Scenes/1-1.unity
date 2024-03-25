@@ -1741,6 +1741,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2334509631050328814, guid: e8daca6291a14a748988eafcc11ea419, type: 3}
   m_PrefabInstance: {fileID: 466257661}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &470183179 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3576046686375706918, guid: 2fbb3698072055340b82a62ce47a521a, type: 3}
+  m_PrefabInstance: {fileID: 2970772623060824066}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a94828548f46c5245aceba2400a3d48a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &471133973
 GameObject:
   m_ObjectHideFlags: 0
@@ -2533,6 +2544,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1465786322041418774, guid: b43631f59686aed44b27ad5b26b85dc8, type: 3}
   m_PrefabInstance: {fileID: 609138524}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &637031661 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9031297138391911387, guid: 2fbb3698072055340b82a62ce47a521a, type: 3}
+  m_PrefabInstance: {fileID: 2970772623060824066}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a94828548f46c5245aceba2400a3d48a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &655065154
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8662,17 +8684,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1757997879089584444, guid: 2fbb3698072055340b82a62ce47a521a, type: 3}
-      propertyPath: _maxJumpTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1757997879089584444, guid: 2fbb3698072055340b82a62ce47a521a, type: 3}
-      propertyPath: _maxJumpHeight
-      value: 5
-      objectReference: {fileID: 0}
+    - target: {fileID: 1980211901600163157, guid: 2fbb3698072055340b82a62ce47a521a, type: 3}
+      propertyPath: _run
+      value: 
+      objectReference: {fileID: 470183179}
     - target: {fileID: 2703896115551676360, guid: 2fbb3698072055340b82a62ce47a521a, type: 3}
       propertyPath: m_Name
       value: Mario
+      objectReference: {fileID: 0}
+    - target: {fileID: 5150997715572089547, guid: 2fbb3698072055340b82a62ce47a521a, type: 3}
+      propertyPath: _run
+      value: 
+      objectReference: {fileID: 637031661}
+    - target: {fileID: 5150997715572089547, guid: 2fbb3698072055340b82a62ce47a521a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9031297138391911387, guid: 2fbb3698072055340b82a62ce47a521a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
