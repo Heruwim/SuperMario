@@ -50,6 +50,17 @@ public class PlayerMovements : MonoBehaviour
         _rigidbody.MovePosition(position);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.layer != LayerMask.NameToLayer("PowerUp"))
+        {
+            if(transform.DotTest(collision.transform, Vector2.up))
+            {
+                _velocity.y = 0f;
+            }
+        }
+    }
+
     private void HorizontalMovement()
     {
         _inputAxis = Input.GetAxis("Horizontal");
