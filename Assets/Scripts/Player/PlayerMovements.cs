@@ -70,6 +70,15 @@ public class PlayerMovements : MonoBehaviour
         {
             _velocity.x = 0f;
         }
+
+        if(_velocity.x > 0f)
+        {
+            transform.eulerAngles = Vector3.zero;
+        }
+        else if(_velocity.x < 0f)
+        {
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
     }
 
     private void GroundedMovement()
