@@ -65,6 +65,11 @@ public class PlayerMovements : MonoBehaviour
     {
         _inputAxis = Input.GetAxis("Horizontal");
         _velocity.x = Mathf.MoveTowards(_velocity.x, _inputAxis * _moveSpeed, _moveSpeed * Time.deltaTime);
+
+        if(_rigidbody.Raycast(Vector2.right * _velocity.x))
+        {
+            _velocity.x = 0f;
+        }
     }
 
     private void GroundedMovement()
